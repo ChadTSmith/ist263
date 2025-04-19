@@ -35,6 +35,9 @@ h2{ font-size: 3em;}
 .topleft, .bottomleft{order : 1;}
 .topright, .bottomright{order: 2;}
 
+.skip{color:#03045E}
+.email{color:darkslateblue}
+.linkedin{color:rgb(0, 0, 0)}
 .imghead
 {
     max-width: 100%;
