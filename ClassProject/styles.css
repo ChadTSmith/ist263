@@ -1,14 +1,23 @@
 
 
-body{font-family: "Roboto Slab", serif;
-    background-color: #E3F6FA;}
 
+html, body {
+    height: 100%; /* Full viewport height */
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    background-color: #E3F6FA;
+  }
+.modalimg{width:60%}
 nav{background-color: #A1C8F0;
     display: flex;
     justify-content: space-around;
     padding: .5%;
 }
-
+.competencies{color: #34113F}
+.projects{color: #34113F}
+li{margin: 10px 0;}
+.lista{font-size: 1.3em;}
+.lista li{margin-bottom: 40px}
 nav a{color: #5B6A79;
 font-size: 1.5em;
 text-decoration: none;}
@@ -16,12 +25,68 @@ text-decoration: none;}
 nav a:hover{
     text-decoration: underline;
 }
-
+.factsetlogobig, .factsetlogosmall, .tensorlogobig, .tensorlogosmall:hover{cursor: pointer;}
+.accomp{font-family: "Montserrat", sans-serif;}
+.comp{font-family: "Oxygen", sans-serif;}
 footer{text-align: center;}
-h1{color: #159ECA}
+h1, h2{color: #0F7799}
 .introduction{width: 30%;
                 font-size: 1.3em;}
 
+.projects{background-color: #C8EEF6;
+    border-top: 2px solid black;}
+
+.projecthead{text-align: center;
+    font-size: 2em;}
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto; /* 15% from the top and centered */
+padding: 20px;
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
+opacity: 1;
+animation-name: fadeInOpacity;
+animation-iteration-count: 1;
+animation-timing-function: ease-in;
+animation-duration: .75s;
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* The Close Button */
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
 @media screen and (max-width: 600px)
 {
     nav
@@ -38,9 +103,26 @@ h1{color: #159ECA}
                 
         flex-direction: column;
         align-items: center;
+        gap: 10px;
                 }
     .introduction{width: 80%;
     font-size: 1.3em;}
+
+    .accomp{width: 80%;
+        font-size: 1.3em}
+    
+    .comp{width: 80%;
+            font-size: 1.3em}
+    .tensorlogobig{display: none;}
+    .factsetlogobig{display: none;}
+    .logos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+                }
+    .content1, .content2{text-align: center;}
+    .tensorlogobig, .factsetlogobig{text-align: center;}
 }
 @media screen and (min-width: 600px)
 {
@@ -58,4 +140,42 @@ h1{color: #159ECA}
     
         .introduction{width: 30%;
             font-size: 1.3em;}
+        
+            .competencies{display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 100%;
+                margin-top: -3%;
+                }
+        .logos{display: flex;
+            justify-content: space-around;
+            padding-top: 5%;
+            align-items: center;} 
+        .content1, .content2{text-align: center;}
+        .tensorlogobig, .factsetlogobig{text-align: center;}
+        .factsetlogobig{margin-bottom: 20%;}
+        .tensorflowcontent{margin-top: -6%;}
+
+        
+        .vl {
+            background-color: black;
+            height: 60%;
+            flex: 0 0 2px;
+            margin: 0;
+            }
+
+        
+        .accomp{width: 30%;
+            font-size: 1.3em;
+            }
+        
+        .comp{width: 30%;
+                font-size: 1.3em;}
+        
+        .tensorlogosmall{display: none;}
+        .factsetlogosmall{display: none;}
+
+        
+        
 }
+

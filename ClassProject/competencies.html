@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Competencies and Skills</title>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen:wght@300;400;700&family=Roboto+Slab&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Competencies and Skills</title>
+        <script>
+             function openModal(id, modalname)
+        {
+                    // Get the modal
+        var modal = document.getElementById(modalname);
 
-<style>
-</style>
+        // Get the button that opens the modal
+        var btn = document.getElementById(id);
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+        }
+        </script>
+    </head>
+
+
+
 
 <body>
 
     <nav>
-        <a href="https://chadtsmith.github.io/ist263/ClassProject/">Home</a>
-        <a href="https://chadtsmith.github.io/ist263/ClassProject/competencies.html">Competencies and Projects</a>
-        <a href="https://chadtsmith.github.io/ist263/ClassProject/aboutme.html">About Me</a>
+        <a href="https://chadtsmith.github.io/ist263/ClassProject/">HOME</a>
+        <a href="https://chadtsmith.github.io/ist263/ClassProject/competencies.html">COMPETENCIES AND PROJECTS</a>
+        <a href="https://chadtsmith.github.io/ist263/ClassProject/aboutme.html">ABOUT ME</a>
     </nav>
 
-    <div>
-        <section>
+    <div class="competencies">
+        <section class="comp">
             <h2>Competencies</h2>
 
             <p>Over my college years I've gained Proficiency In</p>
@@ -35,9 +72,10 @@
                 <li>Experience in the Field of Artificial Intelligence</li>
               </ul>
         </section>
-        <section>
+        <div class="vl"></div>
+        <section class="accomp">
             <h2>Accomplishments</h2>
-            <ul>
+            <ul class="lista">
                 <li>Maintained a Gpa of 3.8 Over 4 Years</li>
                 <li>Made the Deans List Every Semester</li>
                 <li>On Track to Obtain My Masters After One Year of Graduate School</li>
@@ -46,14 +84,16 @@
         </section>
     </div>
 
-    <footer>
-        <h1>Key Projects</h1>
-        <div>
-        <div>
-            <img class="tensorlogo" alt="TensorFlow Logo" src="https://raw.githubusercontent.com/ChadTSmith/ist263/main/images/TensorFlowLogo.png">
+    <section class = "projects">
+        <h1 class = "projecthead">Key Projects</h1>
+        <div class="logos">
+        <div class="tensorflowcontent">
+            <img id=tensorlogobig class="tensorlogobig" alt="TensorFlow Logo" src="../images/TensorFlowLogoBig.png" onclick="openModal('tensorlogobig','myModal')">
+            <img id=tensorlogosmall class="tensorlogosmall" alt="TensorFlow Logo" src="../images/TensorFlowLogoSmall.png" onclick="openModal('tensorlogosmall', 'myModal')">
+            <div class="content1">
             <p>Summer Research With a Professor (2023)</p>
             <p>(Click To Expand)</p>
-
+                <!--
             <p> Modal Content For Reference</p>
             <p>
                 During the summer of 2023 I had the pleasure of working with a professor on a summer research project 
@@ -65,14 +105,17 @@
                 Debugging Python code which was primarily used to gather information about the proofs. In the end our 
                 professor was able to create a research paper about the project but unfortunately was not accepted in 
                 the publishing process. Either way the project granted me an incredible amount of experience in the 
-                field of Artificial Intelligence that I may end up using in a future career path.</p>
+                field of Artificial Intelligence that I may end up using in a future career path.</p>-->
+            </div>
         </div>
 
         <div>
-            <img class="factsetlogo" alt="FactSetLogo Logo" src="https://raw.githubusercontent.com/ChadTSmith/ist263/main/images/FactSet_Logo_CMYK_Cyan.png">
+            <img id='factsetlogobig' class="factsetlogobig" alt="FactSetLogo Logo" src="../images/FactSet_LogoBig.png" onclick="openModal('factsetlogobig','myModal2')">
+            <img id='factsetlogosmall'class="factsetlogosmall" alt="FactSetLogo Logo" src="../images/FactSet_LogoSmall.png" onclick="openModal('factsetlogosmall','myModal2')">>
+            <div class="content2">
             <p>Summer Internship Project (2024)</p>
             <p>(Click To Expand)</p>
-
+            <!--
             <p> Modal Content For Reference</p>
             <p>
                         
@@ -88,10 +131,72 @@
                     was able to finish the project in time for the internship’s end. I hope to do some more great work when I 
                     return there for this summer!
             </p>
+        -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1>TensorFlow Summer Research</h1>
+              <img class="modalimg" src="../images/AIStockImage.png" alt="Robotic Finger Touching Neural Network">
+              <p>
+                During the summer of 2023 I had the pleasure of working with a professor on a summer research project 
+                detailing if Artificial Intelligence can be used to construct mathematical proofs.</p>
+                <p>
+                    During that time I  researched and became acquainted with A.I tools such as TensorFlow to see if an A.I can guess the next 
+                step in a proof when given a database of proofs. If successful this can drastically decrease the potential 
+                overhead of proof creation as Artificial Intelligence would be much more adept at applying the millions 
+                of proof concepts to a given problem, compared to a human.
+                </p> 
+                <p>
+                This project also gave me experience in 
+                Debugging Python code which was primarily used to gather information about the proofs. In the end our 
+                professor was able to create a research paper about the project </p>
+                <p>
+                The project granted me an incredible amount of experience in the 
+                field of Artificial Intelligence that I may end up using in a future career path.</p>
+            </div>
+          
+          </div>
+
+          <div id="myModal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1>FactSet Summer Internship</h1>
+              <img class="modalimg" src="../images/StockMarketImage.png" alt="Stock Chart With Stocks in Both Green and Red">
+              <p>
+                 <p>   
+                During the summer of 2024 I got hired at FactSet for an opportunity to work on a software engineering 
+                project to assist an industry level Scrum team! 
+                </p>
+                <p>    
+                My project for that summer involved creating a Java 
+                Mock Data Server that can seamlessly integrate into the API that our team created. This server allows 
+                clients to input their own data into an XML file and the server would return that data back to them, 
+                imitating the service of the main server. 
+                </p>
+
+                <p>
+                This purpose of the Mock Server was to potentially be packaged 
+                alongside the API such that we can give a demo of the main server to potential buyers. 
+                </p>
+
+                <p>
+                I thoroughly enjoyed this project as it gave me experience with industry level GitHub practices as well as experience 
+                working with a Scrum Team. Thanks to the guidance of my fellow teammates as well as my Java ability, I 
+                was able to finish the project in time for the internship’s end. I hope to do some more great work when I 
+                return there for this summer!
+                </p>
+            </div>
+          
+          </div>
+        </div>
         </div>
 
         </div>
-    </footer>
+    </section>
 
 </body>
 </html>
