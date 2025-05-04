@@ -1,26 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<title>About Me</title>
 
-<style>
-</style>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Montserrat&family=Oxygen:wght@300;400;700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Chad Smith - About Me</title>
+    <script>
+        function openModal(id, modalname, close)
+   {
+               // Get the modal
+   var modal = document.getElementById(modalname);
+
+   // Get the button that opens the modal
+   var btn = document.getElementById(id);
+
+   // Get the <span> element that closes the modal
+   var span = document.getElementsByClassName(close)[0];
+
+   // When the user clicks on the button, open the modal
+   btn.onclick = function() {
+   modal.style.display = "block";
+   }
+
+   // When the user clicks on <span> (x), close the modal
+   span.onclick = function() {
+   modal.style.display = "none";
+   }
+
+   // When the user clicks anywhere outside of the modal, close it
+   window.onclick = function(event) {
+   if (event.target == modal) {
+       modal.style.display = "none";
+   }
+   }
+   }
+   </script>
+</head>
 
 <body>
-
     <nav>
-        <a href="https://chadtsmith.github.io/ist263/ClassProject/">Home</a>
-        <a href="https://chadtsmith.github.io/ist263/ClassProject/competencies.html">Competencies and Projects</a>
-        <a href="https://chadtsmith.github.io/ist263/ClassProject/aboutme.html">About Me</a>
+        <a href="https://chadtsmith.github.io/ist263/ClassProject/" class="leftnav">HOME</a>
+        <a href="https://chadtsmith.github.io/ist263/ClassProject/competencies.html" class="centernav">COMPETENCIES AND PROJECTS</a>
+        <a href="https://chadtsmith.github.io/ist263/ClassProject/aboutme.html" class="rightnav">ABOUT ME</a>
     </nav>
-    <h1>About Me</h1>
-
-    <div>
+    
+    <section>
+        <h2  class="aboutmehead">About Me</h2>
+    <div class="maintrips">
         <div>
-            
+           <img src="../images/AirplaneBig.png" class="airplanebig" alt="" >
+           <img src="../images/AirplaneSmall.png" class="airplanesmall" alt="">
         </div>
-        <div>
-            <p>Traveling around the world has been one of my favorite hobbies ever since I was young! Over the course of my life I have been to many countries around the world including</p>
+        <div class="triplist">
+            <p>Traveling around the world has been one of my favorite hobbies ever since I was young!</p> 
+            <p>Over the course of my life I have been to many countries around the world including</p>
             <ul>
                 <li>England</li>
                 <li>Spain</li>
@@ -31,20 +69,22 @@
                 <li>Korea</li>
                 <li>Russia</li>
                 <li>The Caribbean</li>
-                <li>And Many More</li>
+                <li>And Many More!</li>
               </ul>
 
-              <p>Click the Photos Below to See Descriptions of some of these Notable Trips</p>
+              <p>Click the Photos Below to See Descriptions of some of these Notable Trips!</p>
             </div>
     </div>
-
-    <footer>
-        <h1>Highlighted Trips</h1>
-        <div>
-        <div>
-            <img class="AfricaImg" alt="Picture of a Hot Air Baloon With a Sunset Background in Africa" src="https://raw.githubusercontent.com/ChadTSmith/ist263/main/images/AfricaTripImage.JPG">
+    </section>
+    <div class="divider"></div>
+    <section class="triph">
+        <h2 class="tripheader">Highlighted Trips</h2>
+        <div class="flagflex" >
+        <div class="flagcontent">
+            <button onclick="openModal('AfricaImg', 'myModal', 'close')"><img id="AfricaImg" class="AfricaImg" alt="Flag of Tanzania" src="../images/TanzaniaFlag.png"></button>
+            
             <p>Trip To Africa</p>
-
+            <!--
             <p> Modal Content For Reference</p>
             <p>
                 This picture was from a hot air balloon ride in Africa. I chose the picture because it best 
@@ -53,13 +93,14 @@
                 Wildebeests in their own natural habitat was surreal to see and is by far one of the best experiences 
                 I have ever had in my youth. The hot air balloon ride was especially special since it gave me the 
                 opportunity to see all of the animals from a birds-eye view with the sunrise in the distance. This is 
-                absolutely an experience that I will never forget.</p>
+                absolutely an experience that I will never forget.</p>-->
         </div>
 
-        <div>
-            <img class="CarribeanImage" alt="Persona Photo of a Welcom to Santa Dominica Sign with Mountains In Background" src="https://raw.githubusercontent.com/ChadTSmith/ist263/main/images/CarribeanTripImage.jpg">
+        <div class="flagcontent">
+            <button onclick="openModal('BarbadosImg', 'myModal2', 'close2')"><img class="BarbadosImg" id="BarbadosImg" alt="Flag of Barbados" src="../images/BarbadosFlag.png"></button>
+            
             <p>Trip to The Carribean</p>
-
+            <!--
             <p> Modal Content For Reference</p>
             <p>
                         
@@ -67,12 +108,14 @@
                 islands of the Caribbean. I really enjoyed staying on the beach and touring around the many islands 
                 such as St Martin and St Kitz. I am looking forward to going back in the future!
             </p>
+            -->
         </div>
 
-        <div>
-            <img class="JapanImage" alt="Personal Photo of Cherry Blossoms with Temple In Background" src="https://raw.githubusercontent.com/ChadTSmith/ist263/main/images/JapanTripImage.JPG">
+        <div class="flagcontent">
+            <button onclick="openModal('JapanImg', 'myModal3', 'close3')"><img class="JapanImg" id="JapanImg" alt="Flag of Japan" src="../images/JapanFlag.png"></button>
+            
             <p>Trip To Japan</p>
-
+            <!--
             <p> Modal Content For Reference</p>
             <p>
                         
@@ -81,10 +124,78 @@
                 Fuji. I especially enjoyed the dining experience as there were many tasty restaurants in the area I 
                 ended up going to. Overall an extremely pleasant experience that I think fondly of every day
             </p>
+            -->
         </div>
+        
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1>Trip To Africa</h1>
+              <img class="modalimgbig" src="../images/AfricaTripImageBig.png" alt="Hot Air Balloon In the Sky of an Open Field During Sunrise">
+              <img class="modalimgsmall" src="../images/AfricaTripImageSmall.png" alt="Hot Air Balloon In the Sky of an Open Field During Sunrise">
+              <div class="africacontent">
+              <p>
+                The picture above was from a hot air balloon ride in Africa. I chose this picture because it best 
+                encapsulated my feelings about that trip as a whole. </p>
+                
+                <p>
+                The trip mainly comprised of animal safaris as 
+                well as sightseeing on the open savannahs of Africa. Being able to see Lions, Giraffes and 
+                Wildebeests in their own natural habitat was surreal to see and is by far one of the best experiences 
+                I have ever had in my youth. 
+                </p>
+
+                <p>
+                The hot air balloon ride was especially special since it gave me the 
+                opportunity to see all of the animals from a birds-eye view with the sunrise in the distance. This is 
+                absolutely an experience that I will never forget.
+            
+            </p>
+        </div>
+                 
+            </div>
+            </div>
+
+            <div id="myModal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close2">&times;</span>
+                  <h1>Trip to the Carribean</h1>
+                  <img class="modalimgsmall" src="../images/CarribeanTripImageSmall.png" alt="Mountanous Background of the Carribean with a Welcome to Dominca Sign in View" >
+                  <img class="modalimgbig" src="../images/CarribeanTripImageBig.png" alt="Mountanous Background of the Carribean with a Welcome to Dominca Sign in View" >
+                  <p class="carribeancontent">
+                    This picture above was from my most recent travel experience, a cruise on Queen Mary 2 around the 
+                    islands of the Caribbean. I really enjoyed staying on the beach and touring around the many islands 
+                    such as St Martin and St Kitz. I am looking forward to going back in the future!
+                  </p>
+                     
+                </div>
+              </div>
+
+              <div id="myModal3" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close3">&times;</span>
+                  <h1>Trip to Japan</h1>
+                  <img class="modalimgsmall" src="../images/JapanTripImageSmall.png" alt="Japanese Temple Surrounded By Cherry Blossoms in the City">
+                  <img class="modalimgbig" src="../images/JapanTripImageBig.png" alt="Japanese Temple Surrounded By Cherry Blossoms in the City">
+                 <p class="japancontent">
+                    This picture was taken when I was on a trip to Japan many years back. As you can see in the picture, I ended up going in the spring based on the Cherry Blossoms in bloom. During this trip I was 
+                    able to go to many of the excursions in Akihabara as well as go to famous landmarks such as Mt. 
+                    Fuji. I especially enjoyed the dining experience as there were many tasty restaurants in the area I 
+                    ended up going to. Overall an extremely pleasant experience that I think fondly of every day
+                 </p>
+                </div>
+              
+              </div>
+          
+          </div>
 
         </div>
-    </footer>
-
+    </section>
 </body>
 </html>
