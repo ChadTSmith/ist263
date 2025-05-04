@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <title>Competencies and Skills</title>
         <script>
-             function openModal(id, modalname)
+             function openModal(id, modalname, close)
         {
                     // Get the modal
         var modal = document.getElementById(modalname);
@@ -18,7 +18,7 @@
         var btn = document.getElementById(id);
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName(close)[0];
 
         // When the user clicks on the button, open the modal
         btn.onclick = function() {
@@ -51,7 +51,16 @@
         <a href="https://chadtsmith.github.io/ist263/ClassProject/aboutme.html">ABOUT ME</a>
     </nav>
 
-    <div class="competencies">
+    <header>
+        <div>
+        <a href="#main"
+        class="skip">Skip to main
+                content</a>
+        </div>
+    </header>
+
+    
+    <div class="competencies" id="main">
         <section class="comp">
             <h2>Competencies</h2>
 
@@ -88,8 +97,8 @@
         <h1 class = "projecthead">Key Projects</h1>
         <div class="logos">
         <div class="tensorflowcontent">
-            <img id=tensorlogobig class="tensorlogobig" alt="TensorFlow Logo" src="../images/TensorFlowLogoBig.png" onclick="openModal('tensorlogobig','myModal')">
-            <img id=tensorlogosmall class="tensorlogosmall" alt="TensorFlow Logo" src="../images/TensorFlowLogoSmall.png" onclick="openModal('tensorlogosmall', 'myModal')">
+           <button  onclick="openModal('tensorlogobig','myModal', 'close')" class="tensorlogobig"><img id=tensorlogobig  alt="TensorFlow Logo" src="../images/TensorFlowLogoBig.png"></button>
+            <button onclick="openModal('tensorlogosmall', 'myModal', 'close')" class="tensorlogosmall"><img id=tensorlogosmall alt="TensorFlow Logo" src="../images/TensorFlowLogoSmall.png"></button>
             <div class="content1">
             <p>Summer Research With a Professor (2023)</p>
             <p>(Click To Expand)</p>
@@ -110,8 +119,8 @@
         </div>
 
         <div>
-            <img id='factsetlogobig' class="factsetlogobig" alt="FactSetLogo Logo" src="../images/FactSet_LogoBig.png" onclick="openModal('factsetlogobig','myModal2')">
-            <img id='factsetlogosmall'class="factsetlogosmall" alt="FactSetLogo Logo" src="../images/FactSet_LogoSmall.png" onclick="openModal('factsetlogosmall','myModal2')">>
+            <button onclick="openModal('factsetlogobig','myModal2', 'close2')" class="factsetlogobig" ><img id='factsetlogobig' alt="FactSetLogo Logo" src="../images/FactSet_LogoBig.png"></button>
+            <button onclick="openModal('factsetlogosmall','myModal2', 'close2')" class="factsetlogosmall"><img id='factsetlogosmall' alt="FactSetLogo Logo" src="../images/FactSet_LogoSmall.png"></button>
             <div class="content2">
             <p>Summer Internship Project (2024)</p>
             <p>(Click To Expand)</p>
@@ -163,7 +172,7 @@
 
             <!-- Modal content -->
             <div class="modal-content">
-              <span class="close">&times;</span>
+              <span class="close2">&times;</span>
               <h1>FactSet Summer Internship</h1>
               <img class="modalimg" src="../images/StockMarketImage.png" alt="Stock Chart With Stocks in Both Green and Red">
               <p>
